@@ -131,6 +131,10 @@ int Tree::put_value(const char* key, Value* value) {
     return 0;
 }
 
+int Tree::put_value(std::string key, Value* value) {
+    return put_value(key.c_str(), value);
+}
+
 Tree::T::iterator Tree::begin() {
 	return get_value<T*>()->begin();
 }

@@ -4,14 +4,10 @@
 #include <stdio.h>
 
 int main() {
-    const char* buffer = "{\"key\":\"Hello\"}";
-    cereal::json::Parser parser;
-    cereal::json::Value* value;
-
-    parser.parse(buffer, &value);
+    cereal::json::Tree t;
+    cereal::json::Value* value = new cereal::json::Value(cereal::json::STRING, strdup("Thomas"));
+    t.put_value("key", value);
 
     cereal::json::Printer p(0, " ");
-    p.print(value);
-
-    delete value;
+    p.print(&t);
 }

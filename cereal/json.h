@@ -111,6 +111,8 @@ namespace cereal {
 			 */
 			int put_value(const char*, Value*);
 
+            int put_value(std::string, Value*);
+
 			/**
 			 * Make Tree iterable
 			 */
@@ -119,6 +121,14 @@ namespace cereal {
 			T::iterator end();
 
 			size_t size();
+        };
+
+        /**
+         * Interface for writing some class to Tree*
+         */
+        class DLL_PUBLIC ToJson {
+        public:
+            virtual int toJson(Tree*) = 0;
         };
 
     }
