@@ -1,6 +1,8 @@
 #ifndef CEREAL_JSON_PRINTER_H
 #define CEREAL_JSON_PRINTER_H
 
+#include <string.h>
+
 #include <cereal/lib_maker.h>
 
 #include <cereal/json.h>

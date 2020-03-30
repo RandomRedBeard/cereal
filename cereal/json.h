@@ -5,6 +5,8 @@
 #include <map>
 #include <string>
 
+#include <string.h>
+
 #include <cereal/lib_maker.h>
 #include <cereal/cmp_str.h>
 

@@ -1,7 +1,7 @@
 #ifndef CEREAL_CMP_STR_H
 #define CEREAL_CMP_STR_H
 
-#include <string>
+#include <cstring>
 
 /**
  * const char* comparison
